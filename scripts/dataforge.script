@@ -1,0 +1,4 @@
+CREATE UserProfile;
+QUANTITY 500;
+WAIT 5000ms;
+EXPORT UserProfile;
