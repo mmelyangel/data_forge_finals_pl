@@ -18,7 +18,7 @@ export function parse(tokens: Token[]): Program {
 
     if (token.type !== "KEYWORD") {
       throw new Error(
-        `Syntax Error: Expected a Marites Action at line ${token.line}, but got '${token.value}'`,
+        `Syntax Error: Expected a valid statement or action at line at line ${token.line}, but got '${token.value}'`,
       );
     }
 
@@ -57,7 +57,7 @@ export function parse(tokens: Token[]): Program {
     // Checking for 'SYMBOL' now aligns perfectly with your updated lexer
     if (peek().type !== "SYMBOL" || peek().value !== ";") {
       throw new Error(
-        `Syntax Error: Missing semicolon ';' at line ${node.line}. Wag kalimutan ang tuldok!`,
+        `Syntax Error: Missing semicolon ';' at line ${node.line}.`,
       );
     }
 

@@ -46,7 +46,7 @@ export function tokenize(rawCode: string): Token[] {
 
     if (!matched) {
       throw new Error(
-        `Lexical Error: Unrecognized tsismis format at line ${line}`,
+        `Lexical Error: Unrecognized token or character sequence at line ${line}`,
       );
     }
   }

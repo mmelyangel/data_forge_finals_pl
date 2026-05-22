@@ -30,7 +30,7 @@ export function tokenize(rawCode) {
             }
         }
         if (!matched) {
-            throw new Error(`Lexical Error: Unrecognized tsismis format at line ${line}`);
+            throw new Error(`Lexical Error: Unrecognized token or character sequence at line ${line}`);
         }
     }
     tokens.push({ type: "EOF", value: "EOF", line });
